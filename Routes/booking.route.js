@@ -3,7 +3,7 @@ const cors = require('cors');
 const bcrypt = require('bcrypt');
 var jwt = require('jsonwebtoken');
 const {connection,UserModel,Busmodel}= require('../models/model')
-
+const {watchman} = require('../middlewere/watchman')
 require('dotenv').config()
 
 
@@ -14,7 +14,7 @@ const Bookingrouter=express.Router()
 
 
 
-Bookingrouter.post('/:id/:Seat/:user',async(req,res)=>{
+Bookingrouter.post('/:id/:Seat/:user',watchman,async(req,res)=>{
 let id=req.params.id;
 let seatnumber=req.params.Seat;
 let {date}=req.body;
