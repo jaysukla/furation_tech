@@ -81,6 +81,63 @@ Rout ==>>  /booking/:id/:seatnumber/:userid.
 
 and must send the token in headers with key (Authorization).
 
+ Response => {
+ 
+  "msg": "seat booked",
+  
+  "ticket": {
+  
+    "busid": "649d963d61fdcb008275dc3a",
+    
+    "seatnumber": "5"
+    
+  },
+  
+  "user": {
+  
+    "_id": "649e9b4a9ac7c99845684600",
+    
+    "name": "Akash",
+    
+    "email": "A@gmail.com",
+    
+    "password": "$2b$05$3WYnsZnBJ008zNmGoXd.f.70vgUWMH4C52g5y2DEaKo1U5IRXgpvS",
+    
+    "tickets": [],
+    
+    "__v": 0
+    
+  }
+  
+}
+
+** Later on when user visit his profile he can see the details of tickets **
+** And he can remove those tickets from his profile by visiting Users delete route ** 
+
+Ex:- {
+  "user": {
+  
+    "_id": "649e9b4a9ac7c99845684600",
+    
+    "name": "Akash",
+    
+    "email": "A@gmail.com",
+    
+    "password": "$2b$05$3WYnsZnBJ008zNmGoXd.f.70vgUWMH4C52g5y2DEaKo1U5IRXgpvS",
+    
+    "tickets": [
+      {
+        "busid": "649d963d61fdcb008275dc3a",
+        "seatnumber": "5"
+      }
+    ],
+    
+    "__v": 0
+    
+  }
+  
+}
+
 
 # All routes avalable for /bus 
 
