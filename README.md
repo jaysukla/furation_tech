@@ -37,12 +37,20 @@ response =>> {
 }
 
 # ticket booking 
-rout ==>>  /booking/:id/:seatnumber/:userid .
-:id=> busid :- user can get the bus id by visiting the rout /bus
-:seatnumber=> user can select the seatnumber by own .
-:userid => when user will login he will recive the user details so user can take the user id from there .
+rout ==>>  /booking/:id/:seatnumber/:userid.
 
-and must send the token in headers with key (Authorization)
+
+:id=> busid :- user can get the bus id by visiting the rout /bus.
+
+
+:seatnumber=> user can select the seatnumber by own.
+
+
+:userid => when user will login he will recive the user details so user can take the user id from there.
+
+
+
+and must send the token in headers with key (Authorization).
 
 
 # All routes avalable for bus 
