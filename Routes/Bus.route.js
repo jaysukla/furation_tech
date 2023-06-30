@@ -15,11 +15,19 @@ const Busrouter=express.Router()
 
 
 
-
 Busrouter.get("/",async(req,res)=>{
+let q=req.query;
+if(Object.keys(q).length>0){
+    let Buses=await Busmodel.find(q)
 
-let Buses=await Busmodel.find()
-res.send({"Buses":Buses})
+    res.send({"Buses":Buses})
+
+}else {
+    let Buses=await Busmodel.find()
+
+    res.send({"Buses":Buses})
+}
+
 
 })
 
