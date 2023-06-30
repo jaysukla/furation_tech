@@ -35,3 +35,29 @@ response =>> {
         "__v": 0
     }
 }
+
+# ticket booking 
+rout ==>>  /booking/:id/:seatnumber/:userid .
+:id=> busid :- user can get the bus id by visiting the rout /bus
+:seatnumber=> user can select the seatnumber by own .
+:userid => when user will login he will recive the user details so user can take the user id from there .
+
+and must send the token in headers with key (Authorization)
+
+
+# All routes avalable for bus 
+
+GET /buses
+Retrieves a list of buses.
+
+GET /buses/:id
+Retrieves information about a specific bus.
+
+POST /buses
+Adds a new bus to the system. Requires authentication using the watchman middleware.
+
+PUT /buses/:id
+Updates the details of a specific bus. Requires authentication using the watchman middleware.
+
+DELETE /buses/:id
+Deletes a specific bus. Requires authentication using the watchman middleware.
